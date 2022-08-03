@@ -1,0 +1,171 @@
+.pagination-container {
+    display: flex;
+    list-style-type: none;
+  
+    .pagination-item {
+      padding: 0 12px;
+      height: 32px;
+      text-align: center;
+      margin: auto 4px;
+      color: rgba(0, 0, 0, 0.87);
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      letter-spacing: 0.01071em;
+      border-radius: 16px;
+      line-height: 1.43;
+      font-size: 13px;
+      min-width: 32px;
+  
+      &.dots:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        cursor: pointer;
+      }
+  
+      &.selected {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+  
+      .arrow {
+        &::before {
+          position: relative;
+          /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+          content: '';
+          /* By using an em scale, the arrows will size with the font */
+          display: inline-block;
+          width: 0.4em;
+          height: 0.4em;
+          border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+          border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+        }
+  
+        &.left {
+          transform: rotate(-135deg) translate(-50%);
+        }
+  
+        &.right {
+          transform: rotate(45deg);
+        }
+      }
+  
+      &.disabled {
+        pointer-events: none;
+  
+        .arrow::before {
+          border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+          border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+        }
+  
+        &:hover {
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+  h1,
+  p {
+    font-family: Lato;
+  }
+  table {
+    width: 95%;
+    border: 5px solid #2c3e50;
+    margin: 0px 15px;
+    max-height: 500px;
+    font-family: ui-sans-serif;
+    font-size: 18px;
+  }
+  
+  thead tr th {
+    font-weight: 500;
+    text-align: left;
+    background-color: #34495e;
+    color: white;    text-transform: uppercase;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    overflow-wrap: break-word;
+  }
+  
+  .pagination-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+    .fav{
+      color: yellow;
+      
+    }
+
+    .notFav{
+      color: black;
+    }
+
+    .search-box{
+      width: 40%;
+      border-radius: 25px;
+      padding: 5px 0px;
+      padding-left: 20px;
+      margin:10px 0px;
+    }
+
+    .openPopup{  
+    opacity: 0.5;
+    height: 721px;
+    position: fixed;
+    width: 100%;
+    }
+
+    .closePopup{
+      background-color: #fafafa
+    }
+
+    .favIconOn{
+      font-size: 25px;
+      color: yellow;
+      cursor: pointer;
+    }
+    .favIconOff{
+      font-size: 25px;
+      color: black;
+      cursor: pointer;
+    }
+
+    .popup-close{
+      float: right;
+      border: none;
+      background-color: transparent;
+    }
+
+
+    .popup-area{
+      background-color: white;
+      position: absolute;
+      top: 7%;
+      left: 27%;
+      width: 45%;
+      border: 3px solid #34495e;
+      padding: 10px;
+      font-family: ui-sans-serif;
+      h1{
+        text-transform: uppercase;
+      }
+      p{
+        text-transform: uppercase;
+    font-size: 17px;
+      }
+    }
+
+    .fav-desp{
+      float: right;
+    }
